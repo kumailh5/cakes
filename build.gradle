@@ -26,6 +26,7 @@ buildscript {
             'okhttp'          : '4.7.2',
             'retrofit'        : '2.9.0',
             'roboelectric'    : '4.6.1',
+            'swipelayout'     : '1.1.0',
             'testCore'        : '1.4.0',
             'timber'          : '5.0.1',
             'viewmodel_ktx'   : '2.4.0'

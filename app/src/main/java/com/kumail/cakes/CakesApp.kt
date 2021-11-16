@@ -1,6 +1,7 @@
 package com.kumail.cakes
 
 import android.app.Application
+import androidx.appcompat.app.AppCompatDelegate
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
@@ -16,6 +17,7 @@ class CakesApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setupTimber()
         instance = this
     }

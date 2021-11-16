@@ -54,7 +54,7 @@ class MainViewModelTest {
             Mockito.`when`(repository.getCakesList()).thenReturn(mockCakesResponse)
             viewModel = MainViewModel(repository)
             MatcherAssert.assertThat(
-                mockFilteredCakes.data,
+                mockFormattedCakesList.data,
                 `is`(CoreMatchers.equalTo(viewModel.cakesList.getOrAwaitValue()))
             )
         }
@@ -91,10 +91,10 @@ class MainViewModelTest {
         listOf(mockLemonCake, mockLemonCake, mockBananaCake)
     )
 
-    private val mockFilteredCakes = ApiResponse.Success(
+    private val mockFormattedCakesList = ApiResponse.Success(
         listOf(mockBananaCake, mockLemonCake)
     )
-    
+
     private val mockErrorResponse =
         ApiResponse.NetworkError<ErrorResponse>(
             ErrorResponse(

@@ -48,6 +48,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${versions.appcompat}"
     implementation "com.google.android.material:material:${versions.material}"
     implementation "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:${versions.swipelayout}"
 
     /*Navigation*/
     implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"

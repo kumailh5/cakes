@@ -19,6 +19,7 @@ sealed class ApiResponse<T> {
                     Success(body)
                 }
             } else {
+                //:TODO Better error response parsing can be added if Json response is provided from service
                 val message = response.errorBody()?.string()
                 val errorMessage = if (message.isNullOrEmpty()) {
                     ErrorResponse(response.message(), "", 0)

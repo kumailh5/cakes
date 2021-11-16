@@ -21,6 +21,6 @@ fun String.parseErrorJson(): ErrorResponse {
     return errorResponse ?: ErrorResponse()
 }
 
-fun List<Cake>.formatCakes(): List<Cake> {
+fun List<Cake>.formatCakesList(): List<Cake> {
     return this.distinct().sortedBy { it.title }
 }

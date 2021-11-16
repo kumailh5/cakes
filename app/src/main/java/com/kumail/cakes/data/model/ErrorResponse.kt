@@ -8,6 +8,7 @@ import com.squareup.moshi.JsonClass
 /**
  * Created by kumailhussain on 16/11/2021.
  */
+//:TODO More helpful error messages can be provided to users from network
 @JsonClass(generateAdapter = true)
 data class ErrorResponse(
     @Json(name = "message")

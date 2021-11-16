@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cake"
+            type="com.kumail.cakes.data.model.Cake" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            loadImage="@{cake.imageUrl}"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/cake_image_height"
+            android:paddingTop="@dimen/padding_small"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_birthday_cake_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/lemoncheesecake_lg" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextAppearance.Cakes.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_default"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_default"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="@{cake.title}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image"
+            tools:text="Lemon cheesecake" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
