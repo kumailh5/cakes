@@ -1,6 +1,7 @@
 package com.kumail.cakes.network
 
 import com.kumail.cakes.data.model.ErrorResponse
+import com.kumail.cakes.util.parseErrorJson
 import retrofit2.Response
 
 /**

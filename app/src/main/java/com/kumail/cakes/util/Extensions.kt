@@ -1,6 +1,7 @@
 package com.kumail.cakes.util
 
 import androidx.fragment.app.Fragment
+import com.kumail.cakes.data.model.Cake
 import com.kumail.cakes.data.model.ErrorResponse
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
@@ -18,4 +19,8 @@ fun String.parseErrorJson(): ErrorResponse {
     val errorResponse = adapter.fromJson(this)
 
     return errorResponse ?: ErrorResponse()
+}
+
+fun List<Cake>.formatCakes(): List<Cake> {
+    return this.distinct().sortedBy { it.title }
 }
